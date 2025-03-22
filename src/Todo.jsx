@@ -151,7 +151,7 @@ function Todo() {
                   />
                   <p className="ml-3">{d}</p>
                   <button
-                    className="bg-orange-700 border border-red-600 rounded-md ml-2"
+                    className="ml-2"
                     onClick={() => {
                       setDoneList(
                         doneList.filter(function (item) {
