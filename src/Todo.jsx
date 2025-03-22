@@ -1,6 +1,7 @@
 
 import React, { useEffect } from "react";
 import { useState, useRef } from "react";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 function Todo() {
   let savedText = localStorage.getItem("my-item") || "[]";
@@ -76,17 +77,6 @@ function Todo() {
                 {" "}
                 Things to do
               </h2>
-
-              {/* <div id="todos" className="">
-								<div className="flex items-center mt-4">
-									<input type="checkbox" id="myCheckbox" />
-									<div className="ml-3">clean my coputer</div>
-								</div>
-								<div className="flex items-center mt-2">
-									<input type="checkbox" />
-									<div className="ml-3 text-sm">Buy a keybord</div>
-								</div>
-							</div> */}
               {list.length > 0 ? (
                 list.map((a) => {
                   return (
@@ -151,10 +141,6 @@ function Todo() {
             </p>
           </div>
           <div>
-            {/* <div className="flex items-center px-8 mt-4">
-							<input type="checkbox" defaultChecked="true" />
-							<p className="ml-3">clean my coputer</p>
-						</div> */}
             {doneList.map((d) => {
               return (
                 <div className="flex items-center px-8 mt-4">
@@ -165,7 +151,7 @@ function Todo() {
                   />
                   <p className="ml-3">{d}</p>
                   <button
-                    className="bg-orange-700 border border-red-600 rounded-md"
+                    className="bg-orange-700 border border-red-600 rounded-md ml-2"
                     onClick={() => {
                       setDoneList(
                         doneList.filter(function (item) {
@@ -174,7 +160,7 @@ function Todo() {
                       );
                     }}
                   >
-                    Close
+                 <IoCloseCircleOutline/>   
                   </button>
                 </div>
               );
