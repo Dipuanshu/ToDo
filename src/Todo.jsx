@@ -1,3 +1,4 @@
+/** @format */
 
 import React, { useEffect } from "react";
 import { useState, useRef } from "react";
@@ -149,7 +150,7 @@ function Todo() {
                     defaultChecked="true"
                     onChange={() => markAsNotDone(d)}
                   />
-                  <p className="ml-3">{d}</p>
+                  <p className="ml-3 items-center">{d}</p>
                   <button
                     className="ml-2"
                     onClick={() => {
@@ -160,7 +161,7 @@ function Todo() {
                       );
                     }}
                   >
-                 <IoCloseCircleOutline/>   
+                    <IoCloseCircleOutline />
                   </button>
                 </div>
               );
